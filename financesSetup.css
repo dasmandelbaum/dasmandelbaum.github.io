@@ -1,181 +1,208 @@
-     
-        line{
-				stroke: blue; stoke-width: 4px;
-			}
-			
-			.title
-			{
-				font-family: "Comic Sans MS", "Comic Sans", cursive;
-				font-size:25px;
-			}
-			
-			#info{
-				color : red;
-			}
-			#statement{
-				font-style: italic;
-			}
-			#important-info{
-				font-weight: bold;
-			}
-			.axis path,
-			.axis line {
-				fill: none;
-				stroke: black;
-				shape-rendering: crispEdges;
-			}
-			
-			.axis text {
-				font-family: sans-serif;
-				font-size: 10px;
-			}
-			
-			
-			/* Style the tab */
-			div.tab {
-				float: left;
-				border: 1px solid #ccc;
-				background-color: #f1f1f1;
-				width: 15%;
-				height: 300px;
-			}
 
-			/* Style the buttons inside the tab */
-			div.tab button {
-				display: block;
-				background-color: inherit;
-				color: black;
-				padding: 22px 16px;
-				width: 100%;
-				border: none;
-				outline: none;
-				text-align: left;
-				cursor: pointer;
-				transition: 0.3s;
-			}
+line{
+    stroke: blue; stoke-width: 4px;
+}
 
-			/* Change background color of buttons on hover */
-			div.tab button:hover {
-				background-color: #ddd;
-			}
+.title
+{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size:25px;
+}
 
-			/* Create an active/current "tab button" class */
-			div.tab button.active {
-				background-color: #ccc;
-			}
+body
+{
+    margin:0;
+    padding:0;
+    height:100%;
+}
 
-			/* Style the tab content */
-			.tabcontent {
-				float: left;
-				padding: 0px 12px;
-				border: 1px solid #ccc;
-				width: 70%;
-				border-left: none;
-				height: 300px;
-			}
-			
-			
-			/*source: https://www.bootply.com/86684*/
-			.dropdown-submenu {
-				position:relative;
-			}
-			
-			.dropdown-submenu>.dropdown-menu {
-				top:0;
-				left:100%;
-				margin-top:-6px;
-				margin-left:-1px;
-				-webkit-border-radius:0 6px 6px 6px;
-				-moz-border-radius:0 6px 6px 6px;
-				border-radius:0 6px 6px 6px;
-			}
-			
-			.dropdown-submenu:hover>.dropdown-menu {
-				display:block;
-			}
-			.dropdown-submenu>a:after {
-				display:block;content:" ";
-				float:right;
-				width:0;
-				height:0;
-				border-color:transparent;
-				border-style:solid;
-				border-width:5px 0 5px 5px;
-				border-left-color:#cccccc;
-				margin-top:5px;
-				margin-right:-10px;
-			}
-			
-			.dropdown-submenu:hover>a:after {
-				border-left-color:#ffffff;
-			}
-			
-			.dropdown-submenu.pull-left {
-				float:none;
-			}
-			
-			.dropdown-submenu.pull-left>.dropdown-menu {
-				left:-100%;
-				margin-left:10px;
-				-webkit-border-radius:6px 0 6px 6px;
-				-moz-border-radius:6px 0 6px 6px;
-				border-radius:6px 0 6px 6px;
-			}
-			
-			
-			/*credit:https://codepen.io/ibrahimjabbari/pen/ozinB*/
-			hr.style17 {
-				border-top: 1px solid #8c8b8b;
-				text-align: center;
-			}
-			hr.style17:after {
-				content: '§';
-				display: inline-block;
-				position: relative;
-				top: -14px;
-				padding: 0 10px;
-				background: #f0f0f0;
-				color: #8c8b8b;
-				font-size: 18px;
-				-webkit-transform: rotate(60deg);
-				-moz-transform: rotate(60deg);
-				transform: rotate(60deg);
-			}
-			
-			.row.vdivide [class*='col-']:not(:last-child):after {
-			  background: #e0e0e0;
-			  width: 1px;
-			  content: "";
-			  display:block;
-			  position: absolute;
-			  top:0;
-			  bottom: 0;
-			  right: 0;
-			  min-height: 70px;
-			}
-			
-			.navbar{
-			    background-color: #A9E0F7;
-			}
-			
-		/* Set the fixed height of the footer here */
-            #footer {
-              bottom: 0;
-              width = 100%;
-              height: 60px;
-              background-color: #A9E0F7;
-              padding-top: 0;
-              border-style: solid;
-              border-width: 1px;
-            }
-            
-            .footerInfo {
-                float: center;
-            }
-            
-            .stats-wrapper {
-            margin: 40px 0;
-            }
-            .stats-wrapper .form-group {
-            margin: 12px 0;
-            }
+#info{
+    color : red;
+}
+#statement{
+    font-style: italic;
+}
+#important-info{
+    font-weight: bold;
+}
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 10px;
+}
+
+
+/* Style the tab */
+div.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 15%;
+    height: 300px;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 300px;
+}
+
+
+/*source: https://www.bootply.com/86684*/
+.dropdown-submenu {
+    position:relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top:0;
+    left:100%;
+    margin-top:-6px;
+    margin-left:-1px;
+    -webkit-border-radius:0 6px 6px 6px;
+    -moz-border-radius:0 6px 6px 6px;
+    border-radius:0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display:block;
+}
+.dropdown-submenu>a:after {
+    display:block;content:" ";
+    float:right;
+    width:0;
+    height:0;
+    border-color:transparent;
+    border-style:solid;
+    border-width:5px 0 5px 5px;
+    border-left-color:#cccccc;
+    margin-top:5px;
+    margin-right:-10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color:#ffffff;
+}
+
+.dropdown-submenu.pull-left {
+    float:none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left:-100%;
+    margin-left:10px;
+    -webkit-border-radius:6px 0 6px 6px;
+    -moz-border-radius:6px 0 6px 6px;
+    border-radius:6px 0 6px 6px;
+}
+
+
+/*credit:https://codepen.io/ibrahimjabbari/pen/ozinB*/
+hr.style17 {
+    border-top: 1px solid #8c8b8b;
+    text-align: center;
+}
+hr.style17:after {
+    content: '§';
+    display: inline-block;
+    position: relative;
+    top: -14px;
+    padding: 0 10px;
+    background: #f0f0f0;
+    color: #8c8b8b;
+    font-size: 18px;
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+.row.vdivide [class*='col-']:not(:last-child):after {
+  background: #e0e0e0;
+  width: 1px;
+  content: "";
+  display:block;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  right: 0;
+  min-height: 70px;
+}
+
+.navbar{
+    background-color: #A9E0F7;
+}
+
+.navbar-default { margin : 0 !important; }
+
+
+
+/* Set the fixed height of the footer here */
+#footer {
+  position: absolute;
+  background-color: #A9E0F7;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  border: 1px solid black;
+}
+
+.footerInfo {
+    float: center;
+}
+
+.stats-wrapper {
+margin: 0 !important;
+}
+.stats-wrapper .form-group {
+margin: 0 !important;
+}
+
+/*https://stackoverflow.com/a/25928395*/
+.pageContentWrapper {
+    padding-bottom: 20px;
+    margin-bottom:75px;/* Height of footer*/
+}
+html{
+  position:relative; 
+  min-height: 100%;
+}
+/*Normalize html and body elements,this style is just good to have*/
+html,body{
+  margin:0;
+  padding:0;
+  padding-bottom: 20px;
+}

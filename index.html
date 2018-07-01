@@ -10,16 +10,17 @@
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src ="financialSpending.js"></script>
-		<link rel="stylesheet" type="text/css" href="financesSetup.css"></script>
+		<link rel="stylesheet" type="text/css" href="financesSetup.css">
+        <link rel="icon" href="monogram.png">
 	</head>
 	<body>
-  		<center>
+  		
 		<!--Help from: https://www.w3schools.com/howto/howto_js_vertical_tabs.asp-->
 		<nav class="navbar navbar-inverse" class="navbar navbar-inverse navbar-fixed-top">
 		  <div class="container-fluid">
-			<div class="navbar-header">
+			<div class="navbar-header" id="home-button">
 			  <p class="navbar-text" style="font-size: 14px;">Melyssa and David Finances</p>
-			  <a class="clicker" href="#front-page" data-toggle="collapse" class="navbar-left"><img src="monogram.png" style="width: 50px; height: 50px;"></a>
+			  <a href="#front-page" class="navbar-left"><img src="monogram.png" style="width: 50px; height: 50px;"></a>
 			</div>
 			<ul class="nav navbar-nav">
 			  <li class="dropdown">
@@ -27,7 +28,7 @@
 				<span class="caret"></span></a>
 				<ul class="dropdown-menu">
 					<li class="dropdown-submenu">
-                          <a class="test" tabindex="-1" href="#">By month</a>
+                          <a class="test" tabindex="-1" href="#months">By month</a>
 						  <ul class="dropdown-menu">
 							  <li><a class="clicker" href="#june16info" data-toggle="collapse">June</a></li>
 							  <li><a class="clicker" href="#july16info" data-toggle="collapse">July</a></li>
@@ -44,7 +45,7 @@
 						  </ul>
 					</li>
 					<li class="dropdown-submenu">
-                          <a class="test" tabindex="-1" href="#">By item</a>
+                          <a class="test" tabindex="-1" href="#items">By item</a>
 						  <ul class="dropdown-menu">
 							  <li><a class="clicker" href="#rentRow" data-toggle="collapse">Rent</a></li>
 							  <li><a class="clicker" href="#rentInsRow" data-toggle="collapse">Renter's insurance</a></li>
@@ -71,38 +72,36 @@
 					<li class="dropdown-submenu">
                           <a class="test" tabindex="-1" href="#">By month</a>
 						  <ul class="dropdown-menu">
-							  <li><a class="clicker" href="#june17Row" data-toggle="collapse">June</a></li>
-							  <li class="disabled" data-toggle="collapse"><a href="#july17">July</a></li>
-							  <li class="disabled" data-toggle="collapse"><a href="#august17">August</a></li>
-							  <li class="disabled" data-toggle="collapse"><a href="#september17">September</a></li>
-							  <li class="disabled" data-toggle="collapse"><a href="#october17">October</a></li>
-							  <li class="disabled" data-toggle="collapse"><a href="#november17">November</a></li>
-							  <li class="disabled" data-toggle="collapse"><a href="#december17">December</a></li>
-							  <li class="disabled" data-toggle="collapse"><a href="#january18">January</a></li>
-							  <li class="disabled" data-toggle="collapse"><a href="#february18">February</a></li>
-							  <li class="disabled" data-toggle="collapse"><a href="#march18">March</a></li>
-							  <li class="disabled" data-toggle="collapse"><a href="#april18">April</a></li>
-							  <li class="disabled" data-toggle="collapse"><a href="#may18">May</a></li>
+							  <li><a class="clicker" data-target="#june17info" data-toggle="collapse">June</a></li>
+							  <li><a class="clicker" data-target="#july17info" data-toggle="collapse">July</a></li>
+							  <li><a class="clicker" data-target="#august17info" data-toggle="collapse">August</a></li>
+							  <li><a class="clicker" data-target="#september17info" data-toggle="collapse">September</a></li>
+							  <li><a class="clicker" data-target="#october17info" data-toggle="collapse">October</a></li>
+							  <li><a class="clicker" data-target="#november17info" data-toggle="collapse">November</a></li>
+							  <li><a class="clicker" data-target="#december17info" data-toggle="collapse">December</a></li>
+							  <li><a class="clicker" data-target="#january18info" data-toggle="collapse">January</a></li>
+							  <li><a class="clicker" data-target="#february18info" data-toggle="collapse">February</a></li>
+							  <li><a class="clicker" data-target="#march18info" data-toggle="collapse">March</a></li>
+							  <li><a class="clicker" data-target="#april18info" data-toggle="collapse">April</a></li>
+							  <li><a class="clicker" data-target="#may18info" data-toggle="collapse">May</a></li>
 						  </ul>
 					</li>
-					<li class="disabled"><!--dropdown-submenu"-->
+					<li class=dropdown-submenu>
                           <a class="test" tabindex="-1" href="#">By item</a>
 						  <ul class="dropdown-menu">
-							  <li><a href="#rentRow2">Rent</a></li>
-							  <li><a href="#rentInsRow2">Renter's insurance</a></li>
-							  <li><a href="#conedRow2">ConEd</a></li>
-							  <li><a href="#internetRow2">Internet</a></li>
-							  <li><a href="#foodstaplesRow2">Food Staples</a></li>
-							  <li><a href="#foodoutRow2">Food Eating Out</a></li>
-							  <li><a href="#travelRow2">Travel</a></li>
-							  <li><a href="#presentsRow2">Presents</a></li>
-							  <li><a href="#miscellaneousRow2">Miscellaneous spending</a></li>
-							  <li><a href="#emergencyRow2">Emergency</a></li>
+							  <li><a class="clicker" href="#rentRow2" data-toggle="collapse">Rent</a></li>
+							  <li><a class="clicker" href="#rentInsRow2" data-toggle="collapse">Renter's insurance</a></li>
+							  <li><a class="clicker" href="#conedRow2" data-toggle="collapse">ConEd</a></li>
+							  <li><a class="clicker" href="#internetRow2" data-toggle="collapse">Internet</a></li>
+							  <li><a class="clicker"  href="#foodstaplesRow2" data-toggle="collapse">Food Staples</a></li>
+							  <li><a class="clicker" href="#foodoutRow2" data-toggle="collapse">Food Eating Out</a></li>
+							  <li><a class="clicker" href="#travelRow2" data-toggle="collapse">Travel</a></li>
+							  <li><a class="clicker" href="#miscellaneousRow2" data-toggle="collapse">Miscellaneous spending</a></li>
 						  </ul>
 					</li>
 					<li class="divider"></li>
-					<li class="disabled"><a href="#totals17">Grand Totals</a></li>
-					<li class="disabled"><a href="#breakdown1617">Spending Breakdown</a></li>
+					<li><a class="clicker" href="#totals18" data-toggle="collapse">Grand Totals</a></li>
+					<!--li class="disabled"><a href="#breakdown1718">Spending Breakdown</a></li-->
 				</ul>
 			  </li>
 			  
@@ -128,64 +127,59 @@
 				  <li><a href="#">Grand Totals</a></li>
 				</ul>
 			</li><p class="navbar-text" style="text-indent: 490px;">BS"D</p>
+			</ul>
 		  </div>
 		</nav>
-		</center>
-		<div class="tab-content">
+		
+		<div class="pageContentWrapper" class="accordion-group">
 		<center>
-			<div class="collapse" id="front-page"><br><br><br><br><br>
-				<!--div class="stats-wrapper">
+			<div class="collapse" class="tab-pane active" role="tabpanel" id="front-page">
+                <div class="stats-wrapper" class="row justify-content-center">
 					<div class="container-fluid text-center">    
 					  <hr />
 					  <div class="row justify-content-center">
-						<div class="col-4 col-sm-2">
+                      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                          <div class="form-group">
+                                <label><strong>Prepared by</strong></label>
+                                <span style="display:block" id="title">Melyssa and David Mandelbaum</span>
+                          </div>
+                      </div>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
 						  <div class="form-group">
-							<label><strong>User Story</strong></label>
-							<span style="display:block" id="userStory">User Story</span>
+							<label><strong>Last updated</strong></label>
+							<span style="display:block" id="median">7/1/18</span>
 						  </div>
 						</div>
-						<div class="col-4 col-sm-2">
-						  <div class="form-group">
-							<label><strong>Group</strong></label>
-							<span style="display:block" id="groupName">Group</span>
-						  </div>
-						</div>
-						<div class="col-4 col-sm-2">
-						  <div class="form-group">
-							<label><strong>Session Code</strong></label>
-							<span style="display:block" id="sessionCode">Code</span>
-						  </div>
-						</div>
-						<div class="col-4 col-sm-2">
-						  <div class="form-group">
-							<label><strong>Expected Votes</strong></label>
-							<span style="display:block" id="numVoters">Votes</span>
-						  </div>
-						</div>
-						<div class="col-4 col-sm-2">
-						  <div class="form-group" >
-							<label><strong>Vote Received</strong></label>
-							<span style="display:block" id="votes"></span>
-						  </div>
-						</div>
-						<div class="col-4 col-sm-2">
-						  <div class="form-group">
-							<label><strong>Time</strong></label>
-							<span style="display:block" id="my_timer"> 00:00:00 </span>
-						  </div>
-						</div>
+                      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                          <div class="form-group">
+                                <label><strong>Current year</strong></label>
+                                <span style="display:block" id="title">June 2018 - May 2019</span>
+                      </div>
+                      </div>
 					  </div>
 					  <hr />
 					</div>
 				  </div>
+                <br><br><br>
 				<h1><strong>MELYSSA AND DAVID MANDELBAUM FINANCIAL REVIEW</strong></h1>
 				<br><br><br><h3><em>Choose the year to examine above, <br> then navigate by month, item, or view of totals</em></h3>
-				<h3 id="info">Prepared by Melyssa and David Mandelbaum</h3>
-				<h3 id="info">Date last edited: 7/27/17</h3>
-			</div-->
+                <br><br><br><br>
+			</div>
 		
 			<div class="collapse" class="container" id="june16info" class="tab-pane active" role="tabpanel">
-				<div id="june16" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;">JUNE '16</div>
+                 <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">June 2016</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="june16" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
 				<br><br><br>
 					<div class="progress"  style="width:800px; height:30px;">
 					  <div class="progress-bar" role="progressbar" aria-valuenow="97.82"
@@ -197,7 +191,19 @@
 				
 			
 			<div class="collapse" class="container" class="tab-pane active" role="tabpanel" id="july16info"  >
-				<div id="july16"  style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;">JULY '16</div>
+                 <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">July 2016</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="july16"  style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
 				<br><br><br>
 					<div class="progress" style="width:800px; height:30px;">
 					  <div class="progress-bar" role="progressbar" aria-valuenow="105.57"
@@ -208,7 +214,19 @@
 			</div>
 				
 			<div class="collapse" class="container" class="tab-pane active" id="august16info" role="tabpanel">
-				<div id="august16" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;">AUGUST '16</div>
+                 <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">August 2016</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="august16" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
 				<br><br><br>
 					<div class="progress" style="width:800px; height:30px;">
 					  <div class="progress-bar" role="progressbar" aria-valuenow="99.78"
@@ -219,7 +237,19 @@
 			</div>
 			
 			<div class="collapse" class="container" class="tab-pane active" id="september16info" role="tabpanel"> 
-				<div id="september16" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;">SEPTEMBER '16</div>
+                 <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">September 2016</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="september16" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
 				<br><br><br>
 					<div class="progress" style="width:800px; height:30px;">
 					  <div class="progress-bar" role="progressbar" aria-valuenow="99.38"
@@ -230,7 +260,19 @@
 			</div>
 
 			<div class="collapse" class="container" class="tab-pane active" id="october16info" role="tabpanel">
-				<div id="october16" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;">OCTOBER '16</div>
+                 <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">October 2016</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="october16" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
 				<br><br><br>	
 					<div  class="progress" style="width:800px; height:30px;">
 					  <div class="progress-bar" role="progressbar" aria-valuenow="96.41"
@@ -241,7 +283,19 @@
 			</div>
 			
 			<div class="collapse" class="container" class="tab-pane active" id="november16info" role="tabpanel">
-				<div id="november16" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;">NOVEMBER '16</div>
+                 <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">November 2016</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="november16" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
 				<br><br><br>
 					<div class="progress" style="width:800px; height:30px;">
 					  <div class="progress-bar" role="progressbar" aria-valuenow="108.27"
@@ -252,7 +306,19 @@
 			</div>
 			
 			<div class="collapse" class="container" class="tab-pane active" id="december16info" role="tabpanel">
-				<div id="december16" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;">DECEMBER '16</div>
+                 <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">December 2016</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="december16" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
 				<br><br><br>
 					<div class="progress" style="width:800px; height:30px;">
 					  <div class="progress-bar" role="progressbar" aria-valuenow="93.87"
@@ -263,7 +329,19 @@
 			</div>
 			
 			<div class="collapse" class="container" class="tab-pane active" id="january17info" role="tabpanel"> 
-				<div id="january17" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;">JANUARY '17</div>
+                 <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">January 2017</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="january17" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
 				<br><br><br>
 					<div class="progress" style="width:800px; height:30px;">
 					  <div class="progress-bar" role="progressbar" aria-valuenow="107.99"
@@ -274,7 +352,19 @@
 			</div>
 			
 			<div class="collapse" class="container" class="tab-pane active" id="february17info" role="tabpanel">
-				<div id="february17" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;">FEBRUARY '17</div>
+                  <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">February 2017</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="february17" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
 				<br><br><br>
 					<div class="progress" style="width:800px; height:30px;">
 					  <div class="progress-bar" role="progressbar" aria-valuenow="84.05"
@@ -285,7 +375,19 @@
 				</div>
 			
 			<div class="collapse" class="container" class="tab-pane active" id="march17info" role="tabpanel">
-				<div id="march17" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;">MARCH '17</div>
+                  <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">March 2017</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="march17" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
 				<br><br><br>
 					<div class="progress" style="width:800px; height:30px;">
 					  <div class="progress-bar" role="progressbar" aria-valuenow="86.68"
@@ -296,7 +398,19 @@
 				</div>
 			
 			<div class="collapse" class="container" class="tab-pane active" id="april17info" role="tabpanel">
-				<div id="april17" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;">APRIL '17</div>
+                  <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">April 2017</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="april17" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
 				<br><br><br>
 					<div  class="progress" style="width:800px; height:30px;">
 					  <div class="progress-bar" role="progressbar" aria-valuenow="83.92"
@@ -307,7 +421,19 @@
 				</div>
 			
 			<div class="collapse" class="container" class="tab-pane active" id="may17info" role="tabpanel">
-				<div id="may17" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;">MAY '17</div>
+                  <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">May 2017</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="may17" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
 				<br><br><br>
 					<div class="progress" style="width:800px; height:30px;">
 					  <div class="progress-bar" role="progressbar" aria-valuenow="104.57"
@@ -317,15 +443,39 @@
 					</div>
 				</div>
 			
-			</center>
+			
 			<div class="collapse" class="container-fluid" class="tab-pane active" role="tabpanel"  id="rentRow">
+                 <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">Rent 2016-17</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
 				<div class="row"><br><br><br><br>
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="rentRose16-17" style="width: 700px; height: 200px; font-family: Comic Sans MS; font-size: 25px;"></div>
-					<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8" id="rent16-17" style="width: 600px; height: 450px; "></div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="rentRose16-17" style="width: 700px; height: 200; font-family: Comic Sans MS; font-size: 25px;"></div>
+					<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8" id="rent16-17" style="width: 600px; height: 450px; font-family: Comic Sans MS; font-size: 25px;"></div>
 				</div>
 			</div>
 			
 			<div class="collapse" class="container-fluid" class="tab-pane active" role="tabpanel"  id="rentInsRow">
+                <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">Rent Insurance 2016-17</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
 				<div class="row"><br><br><br><br>
 					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="rentInsRose16-17" style="width: 700px; height: 200; font-family: Comic Sans MS; font-size: 25px;"></div>
 					<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8" id="rentIns16-17" style="width: 600px; height: 450px; font-family: Comic Sans MS; font-size: 25px;"></div>
@@ -333,91 +483,227 @@
 			</div>
 			
 			<div class="collapse" class="container-fluid" class="tab-pane active" role="tabpanel"  id="conedRow">
+                <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr />
+					  <div class="row justify-content-center">
+                      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                      <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">ConEd 2016-17</span>
+                      </div>
+                          </div>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						  <div class="form-group">
+							<label><strong>Mean</strong></label>
+							<span style="display:block" id="coned-16-17-mean"></span>
+						  </div>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						  <div class="form-group">
+							<label><strong>Median</strong></label>
+							<span style="display:block" id="coned-16-17-median"></span>
+						  </div>
+						</div>
+					  </div>
+					  <hr />
+					</div>
+				  </div>
 				<div class="row"><br><br><br><br>
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="conedRose16-17" style="width: 700px; height: 200px; font-family: Comic Sans MS; font-size: 25px;"></div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="conedRose16-17" style="width: 700px; height: 200; font-family: Comic Sans MS; font-size: 25px;"></div>
 					<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8" id="coned16-17" style="width: 600px; height: 450px; font-family: Comic Sans MS; font-size: 25px;"></div>
 				</div><br><br>
-				<div class="collapse" class="container">
-				  <div class="row vdivide" style="font-family: 'Impact';">
-					<div class="col-sm-6 text-center"><h1>Median: <br><br>$80.28</h1></div>
-					<div class="col-sm-6 text-center"><h1>Mean: <br><br>$78.92</h1></div>
-				  </div>
-				</div>
 			</div>
 			
 			<div class="collapse" class="container-fluid" class="tab-pane active" role="tabpanel"  id="internetRow">
+                <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">Internet 2016-17</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
 				<div class="row"><br><br><br><br>
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="internetRose16-17" style="width: 700px; height: 200px; font-family: Comic Sans MS; font-size: 25px;"></div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="internetRose16-17" style="width: 700px; height: 200; font-family: Comic Sans MS; font-size: 25px;"></div>
 					<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8" id="internet16-17" style="width: 600px; height: 450px; font-family: Comic Sans MS; font-size: 25px;"></div>
 				</div>
 			</div>
 			
 			<div class="collapse" class="container-fluid" class="tab-pane active" role="tabpanel"  id="foodstaplesRow">
-				<div class="row"><br><br><br><br>
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="foodstaplesRose16-17" style="width: 700px; height: 200px; font-family: Comic Sans MS; font-size: 25px;"></div>
-					<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8" id="foodstaples16-17" style="width: 600px; height: 450px; font-family: Comic Sans MS; font-size: 25px;"></div>
-				</div>
-				<div class="container">
-				  <div class="row vdivide" style="font-family: 'Impact';">
-					<div class="col-sm-6 text-center"><h1>Median: <br><br>$271.75</h1></div>
-					<div class="col-sm-6 text-center"><h1>Mean: <br><br>$318.36</h1></div>
+                <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr />
+					  <div class="row justify-content-center">
+                      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                      <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">Food Staples 2016-17</span>
+                      </div>
+                          </div>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						  <div class="form-group">
+							<label><strong>Mean</strong></label>
+							<span style="display:block" id="food-staples-16-17-mean"></span>
+						  </div>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						  <div class="form-group">
+							<label><strong>Median</strong></label>
+							<span style="display:block" id="food-staples-16-17-median"></span>
+						  </div>
+						</div>
+					  </div>
+					  <hr />
+					</div>
 				  </div>
+				<div class="row"><br><br><br><br>
+                     <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="foodstaplesRose16-17" style="width: 700px; height: 200; font-family: Comic Sans MS; font-size: 25px;"></div>
+					<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8" id="foodstaples16-17" style="width: 600px; height: 450px; font-family: Comic Sans MS; font-size: 25px;"></div>
 				</div>
 			</div>
 			
 			<div class="collapse" class="container-fluid" class="tab-pane active" role="tabpanel"  id="foodoutRow">
-				<div class="row">
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="foodoutRose16-17"  style="width: 700px; height: 200px; font-family: Comic Sans MS; font-size: 25px;"></div>
-					<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8" id="foodout16-17" style="width: 600px; height: 450px; font-family: Comic Sans MS; font-size: 25px;"></div>
-				</div>
-				<div class="container">
-				  <div class="row vdivide" style="font-family: 'Impact';">
-					<div class="col-sm-6 text-center"><h1>Median: <br><br>$85.78</h1></div>
-					<div class="col-sm-6 text-center"><h1>Mean: <br><br>$94.13</h1></div>
+                <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr />
+					  <div class="row justify-content-center">
+                      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                      <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">Food Eating Out 2016-17</span>
+                      </div>
+                          </div>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						  <div class="form-group">
+							<label><strong>Mean</strong></label>
+							<span style="display:block" id="food-out-16-17-mean"></span>
+						  </div>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						  <div class="form-group">
+							<label><strong>Median</strong></label>
+							<span style="display:block" id="food-out-16-17-median"></span>
+						  </div>
+						</div>
+					  </div>
+					  <hr />
+					</div>
 				  </div>
+				<div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="foodoutRose16-17" style="width: 700px; height: 200; font-family: Comic Sans MS; font-size: 25px;"></div>
+					<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8" id="foodout16-17" style="width: 600px; height: 450px; font-family: Comic Sans MS; font-size: 25px;"></div>
 				</div>
 			</div>
 			
 			<div class="collapse" class="container-fluid" class="tab-pane active" role="tabpanel"  id="travelRow">
+                <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr />
+					  <div class="row justify-content-center">
+                      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                      <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">Travel 2016-17</span>
+                      </div>
+                          </div>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						  <div class="form-group">
+							<label><strong>Mean</strong></label>
+							<span style="display:block" id="travel-16-17-mean"></span>
+						  </div>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						  <div class="form-group">
+							<label><strong>Median</strong></label>
+							<span style="display:block" id="travel-16-17-median"></span>
+						  </div>
+						</div>
+					  </div>
+					  <hr />
+					</div>
+				  </div>
 				<div class="row"><br><br><br><br>
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="travelRose16-17" style="width: 700px; height: 200px; font-family: Comic Sans MS; font-size: 25px;"></div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="travelRose16-17" style="width: 700px; height: 200; font-family: Comic Sans MS; font-size: 25px;"></div>
 					<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8" id="travel16-17" style="width: 600px; height: 450px; font-family: Comic Sans MS; font-size: 25px;"></div>
 				</div><br><br>
-				<div class="container">
-				  <div class="row vdivide" style="font-family: 'Impact';">
-					<div class="col-sm-6 text-center"><h1>Median: <br><br>$187.12</h1></div>
-					<div class="col-sm-6 text-center"><h1>Mean: <br><br>$210.84</h1></div>
-				  </div>
-				</div>
 			</div>
 			
 			<div class="collapse" class="container-fluid" class="tab-pane active" role="tabpanel"  id="presentRow">
+                <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">Presents 2016-17</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
 				<div class="row"><br><br><br><br>
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="presentsRose16-17" style="width: 700px; height: 200px; font-family: Comic Sans MS; font-size: 25px;"></div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="presentsRose16-17" style="width: 700px; height: 200; font-family: Comic Sans MS; font-size: 25px;"></div>
 					<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8" id="presents16-17" style="width: 600px; height: 450px; font-family: Comic Sans MS; font-size: 25px;"></div>
 				</div>
 			</div>
 			
 			<div class="collapse" class="container-fluid" class="tab-pane active" role="tabpanel"  id="miscellaneousRow">
+                <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr />
+					  <div class="row justify-content-center">
+                      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                      <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">Miscellaneous 2016-17</span>
+                      </div>
+                          </div>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						  <div class="form-group">
+							<label><strong>Mean</strong></label>
+							<span style="display:block" id="misc-16-17-mean"></span>
+						  </div>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						  <div class="form-group">
+							<label><strong>Median</strong></label>
+							<span style="display:block" id="misc-16-17-median"></span>
+						  </div>
+						</div>
+					  </div>
+					  <hr />
+					</div>
+				  </div>
 				<div class="row"><br><br><br><br>
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="miscellaneousRose16-17" style="width: 700px; height: 200px; font-family: Comic Sans MS; font-size: 25px;"></div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="miscellaneousRose16-17" style="width: 700px; height: 200; font-family: Comic Sans MS; font-size: 25px;"></div>
 					<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8" id="miscellaneous16-17" style="width: 600px; height: 450px; font-family: Comic Sans MS; font-size: 25px;"></div>
 				</div><br><br>
-				<div  class="container">
-				  <div class="row vdivide" style="font-family: 'Impact';">
-					<div class="col-sm-6 text-center"><h1>Median: <br><br>$190.35</h1></div>
-					<div class="col-sm-6 text-center"><h1>Mean: <br><br>$208.76</h1></div>
-				  </div>
-				</div>
 			</div>
 			
 			<div class="collapse" class="container-fluid" class="tab-pane active" role="tabpanel"  id="emergencyRow">
+                <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">Emergency 2016-17</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
 				<div class="row"><br><br><br><br>
-					<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="emergencyRose16-17" style="width: 700px; height: 200px; font-family: Comic Sans MS; font-size: 25px;"></div>
+                     <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="emergencyRose16-17" style="width: 700px; height: 200; font-family: Comic Sans MS; font-size: 25px;"></div>
 					<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8" id="emergency16-17" style="width: 600px; height: 450px; font-family: Comic Sans MS; font-size: 25px;"></div>
 				</div>
 			</div>
-			<center>
+			
 			<div class="collapse" class="container" class="tab-pane active" id="totals17" role="tabpanel" style="width: 1250px; height: 400px; font-family: Comic Sans MS; font-size: 25px;"><br><br><br><br></div>
 			<!--source of format: https://www.bootply.com/qjvYXfWLuN-->
 			<div class="collapse" class="container" class="tab-pane active" id="breakdown1617" role="tabpanel" style="width: 1250px; height: 400px; font-family: Comic Sans MS; font-size: 25px;">
@@ -442,10 +728,21 @@
 				  </div>
 				</div>
 			</div>
-		</div>
-		<center>
+		
 		<div class="collapse" class="container" id="june17Row" class="tab-pane active"  role="tabpanel">
-			<div id="june17" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;">JUNE '17</div>
+              <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">June 2017</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+			<div id="june17" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
 			<br><br><br>	
 					<div class="progress" style="width:800px; height:30px;">
 					  <div class="progress-bar" role="progressbar" aria-valuenow="96"
@@ -453,33 +750,534 @@
 						96% of monthly allotment spent
 					  </div>
 					</div>
-		</div></center>
-		</center>
-		
-	</div>
-	</center>
+		</div>
+		<div class="collapse" class="container" class="tab-pane active" role="tabpanel" id="july17info"  >
+              <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">July 2017</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="july17"  style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
+				<br><br><br>
+					<div class="progress" style="width:800px; height:30px;">
+					  <div class="progress-bar" role="progressbar" aria-valuenow="105.57"
+						aria-valuemin="0" aria-valuemax="100" style="width:105.57%; height:30px; background-color: #A9E0F7; color:grey;">
+						% of monthly allotment spent
+					  </div>
+					</div>
+			</div>
+				
+			<div class="collapse" class="container" class="tab-pane active" id="august17info" role="tabpanel">
+                  <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">August 2017</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="august17" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
+				<br><br><br>
+					<div class="progress" style="width:800px; height:30px;">
+					  <div class="progress-bar" role="progressbar" aria-valuenow="99.78"
+						aria-valuemin="0" aria-valuemax="100" style="width:99.78%; height:30px; background-color: #A9F7BE; color:grey;">
+						% of monthly allotment spent
+					  </div>
+					</div>
+			</div>
+			
+			<div class="collapse" class="container" class="tab-pane active" id="september17info" role="tabpanel"> 
+                  <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">September 2017</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="september17" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
+				<br><br><br>
+					<div class="progress" style="width:800px; height:30px;">
+					  <div class="progress-bar" role="progressbar" aria-valuenow="99.38"
+						aria-valuemin="0" aria-valuemax="100" style="width:99.38%; height:30px; background-color: #F7A6D7; color:grey;">
+						% of monthly allotment spent
+					  </div>
+					</div>
+			</div>
+
+			<div class="collapse" class="container" class="tab-pane active" id="october17info" role="tabpanel">
+                  <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">October 2017</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="october17" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
+				<br><br><br>	
+					<div  class="progress" style="width:800px; height:30px;">
+					  <div class="progress-bar" role="progressbar" aria-valuenow="96.41"
+						aria-valuemin="0" aria-valuemax="100" style="width:96.41%; height:30px; background-color: #DBF978; color:grey;">
+						% of monthly allotment spent
+					  </div>
+					</div>
+			</div>
+			
+			<div class="collapse" class="container" class="tab-pane active" id="november17info" role="tabpanel">
+                  <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">November 2017</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="november17" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
+				<br><br><br>
+					<div class="progress" style="width:800px; height:30px;">
+					  <div class="progress-bar" role="progressbar" aria-valuenow="108.27"
+						aria-valuemin="0" aria-valuemax="100" style="width:108.27%; height:30px; background-color: #2474B2; color:white;">
+						% of monthly allotment spent
+					  </div>
+					</div>
+			</div>
+			
+			<div class="collapse" class="container" class="tab-pane active" id="december17info" role="tabpanel">
+                  <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">December 2017</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="december17" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
+				<br><br><br>
+					<div class="progress" style="width:800px; height:30px;">
+					  <div class="progress-bar" role="progressbar" aria-valuenow="93.87"
+						aria-valuemin="0" aria-valuemax="100" style="width:93.87%; height:30px; background-color: #ECA12F; color:white;">
+						% of monthly allotment spent
+					  </div>
+					</div>
+			</div>
+			
+			<div class="collapse" class="container" class="tab-pane active" id="january18info" role="tabpanel"> 
+                  <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">January 2018</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="january18" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
+				<br><br><br>
+					<div class="progress" style="width:800px; height:30px;">
+					  <div class="progress-bar" role="progressbar" aria-valuenow="107.99"
+						aria-valuemin="0" aria-valuemax="100" style="width:107.99%; height:30px; background-color: #CE3A89; color:white;">
+						% of monthly allotment spent
+					  </div>
+					</div>
+			</div>
+			
+			<div class="collapse" class="container" class="tab-pane active" id="february18info" role="tabpanel">
+                <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">February 2018</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="february18" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
+				<br><br><br>
+					<div class="progress" style="width:800px; height:30px;">
+					  <div class="progress-bar" role="progressbar" aria-valuenow="84.05"
+						aria-valuemin="0" aria-valuemax="100" style="width:84.05%; height:30px; background-color: #C0C0C0;color:white;">
+						% of monthly allotment spent
+					  </div>
+					</div>
+				</div>
+			
+			<div class="collapse" class="container" class="tab-pane active" id="march18info" role="tabpanel">
+                <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">March 2018</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="march18" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
+				<br><br><br>
+					<div class="progress" style="width:800px; height:30px;">
+					  <div class="progress-bar" role="progressbar" aria-valuenow="86.68"
+						aria-valuemin="0" aria-valuemax="100" style="width:86.68%; height:30px; background-color: #000000; color:white;">
+						% of monthly allotment spent
+					  </div>
+					</div>
+				</div>
+			
+			<div class="collapse" class="container" class="tab-pane active" id="april18info" role="tabpanel">
+                <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">April 2018</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="april18" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
+				<br><br><br>
+					<div  class="progress" style="width:800px; height:30px;">
+					  <div class="progress-bar" role="progressbar" aria-valuenow="83.92"
+						aria-valuemin="0" aria-valuemax="100" style="width:83.92%; height:30px; background-color: #61ce9d; color:white;">
+						% of monthly allotment spent
+					  </div>
+					</div>
+				</div>
+			
+			<div class="collapse" class="container" class="tab-pane active" id="may18info" role="tabpanel">
+                <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">May 2018</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div id="may18" style="width: 1250px; height: 400px; font-family: 'Impact'; font-size: 25px;"></div>
+				<br><br><br>
+					<div class="progress" style="width:800px; height:30px;">
+					  <div class="progress-bar" role="progressbar" aria-valuenow="104.57"
+						aria-valuemin="0" aria-valuemax="100" style="width:104.57%; height:30px; background-color: #ce618a; color:white;">
+						% of monthly allotment spent
+					  </div>
+					</div>
+				</div>
+			
+			<div class="collapse" class="container-fluid" class="tab-pane active" role="tabpanel"  id="rentRow2">
+                <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">Rent 2017-18</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div class="row"><br><br><br><br>
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="rentRose17-18" style="width: 700px; height: 200; font-family: Comic Sans MS; font-size: 25px;"></div>
+					<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8" id="rent17-18" style="width: 600px; height: 450px; font-family: Comic Sans MS; font-size: 25px;"></div>
+				</div>
+			</div>
+			
+			<div class="collapse" class="container-fluid" class="tab-pane active" role="tabpanel"  id="rentInsRow2">
+                <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">Rent Insurance 2017-18</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div class="row"><br><br><br><br>
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="rentInsRose17-18" style="width: 700px; height: 200; font-family: Comic Sans MS; font-size: 25px;"></div>
+					<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8" id="rentIns17-18" style="width: 600px; height: 450px; font-family: Comic Sans MS; font-size: 25px;"></div>
+				</div>
+			</div>
+			
+			<div class="collapse" class="container-fluid" class="tab-pane active" role="tabpanel"  id="conedRow2">
+                <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr />
+					  <div class="row justify-content-center">
+                      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                      <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">ConEd 2017-18</span>
+                      </div>
+                          </div>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						  <div class="form-group">
+							<label><strong>Mean</strong></label>
+							<span style="display:block" id="coned-17-18-mean"></span>
+						  </div>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						  <div class="form-group">
+							<label><strong>Median</strong></label>
+							<span style="display:block" id="coned-17-18-median"></span>
+						  </div>
+						</div>
+					  </div>
+					  <hr />
+					</div>
+				  </div>
+				<div class="row"><br><br><br><br>
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="conedRose17-18" style="width: 700px; height: 200; font-family: Comic Sans MS; font-size: 25px;"></div>
+					<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8" id="coned17-18" style="width: 600px; height: 450px; font-family: Comic Sans MS; font-size: 25px;"></div>
+				</div><br><br>
+			</div>
+			
+			<div class="collapse" class="container-fluid" class="tab-pane active" role="tabpanel"  id="internetRow2">
+                <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr /><div class="row justify-content-center">
+                      <div>
+                          <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">Internet 2017-18</span>
+                        </div>
+                      </div>
+					  </div><hr />
+					</div>
+				  </div>
+				<div class="row"><br><br><br><br>
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="internetRose17-18" style="width: 700px; height: 200; font-family: Comic Sans MS; font-size: 25px;"></div>
+					<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8" id="internet17-18" style="width: 600px; height: 450px; font-family: Comic Sans MS; font-size: 25px;"></div>
+				</div>
+			</div>
+			
+			<div class="collapse" class="container-fluid" class="tab-pane active" role="tabpanel"  id="foodstaplesRow2">
+                <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr />
+					  <div class="row justify-content-center">
+                      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                      <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">Food Staples 2017-18</span>
+                      </div>
+                          </div>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						  <div class="form-group">
+							<label><strong>Mean</strong></label>
+							<span style="display:block" id="food-staples-17-18-mean"></span>
+						  </div>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						  <div class="form-group">
+							<label><strong>Median</strong></label>
+							<span style="display:block" id="food-staples-17-18-median"></span>
+						  </div>
+						</div>
+					  </div>
+					  <hr />
+					</div>
+				  </div>
+				<div class="row"><br><br><br><br>
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="foodstaplesRose17-18" style="width: 700px; height: 200; font-family: Comic Sans MS; font-size: 25px;"></div>
+					<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8" id="foodstaples17-18" style="width: 600px; height: 450px; font-family: Comic Sans MS; font-size: 25px;"></div>
+				</div>
+			</div>
+			
+			<div class="collapse" class="container-fluid" class="tab-pane active" role="tabpanel"  id="foodoutRow2">
+                <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr />
+					  <div class="row justify-content-center">
+                      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                      <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">Food Eating Out 2017-18</span>
+                      </div>
+                          </div>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						  <div class="form-group">
+							<label><strong>Mean</strong></label>
+							<span style="display:block" id="food-out-17-18-mean"></span>
+						  </div>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						  <div class="form-group">
+							<label><strong>Median</strong></label>
+							<span style="display:block" id="food-out-17-18-median"></span>
+						  </div>
+						</div>
+					  </div>
+					  <hr />
+					</div>
+				  </div>
+				<div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="foodoutRose17-18" style="width: 700px; height: 200; font-family: Comic Sans MS; font-size: 25px;"></div>
+					<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8" id="foodout17-18" style="width: 600px; height: 450px; font-family: Comic Sans MS; font-size: 25px;"></div>
+				</div>
+			</div>
+			
+			<div class="collapse" class="container-fluid" class="tab-pane active" role="tabpanel"  id="travelRow2">
+                <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr />
+					  <div class="row justify-content-center">
+                      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                      <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">Travel 2017-18</span>
+                      </div>
+                          </div>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						  <div class="form-group">
+							<label><strong>Mean</strong></label>
+							<span style="display:block" id="travel-17-18-mean"></span>
+						  </div>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						  <div class="form-group">
+							<label><strong>Median</strong></label>
+							<span style="display:block" id="travel-17-18-median"></span>
+						  </div>
+						</div>
+					  </div>
+					  <hr />
+					</div>
+				  </div>
+				<div class="row"><br><br><br><br>
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="travelRose17-18" style="width: 700px; height: 200; font-family: Comic Sans MS; font-size: 25px;"></div>
+					<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8" id="travel17-18" style="width: 600px; height: 450px; font-family: Comic Sans MS; font-size: 25px;"></div>
+				</div><br><br>
+			</div>
+			
+			<div class="collapse" class="container-fluid" class="tab-pane active" role="tabpanel"  id="miscellaneousRow2">
+                <div class="stats-wrapper" class="row justify-content-center">
+					<div class="container-fluid text-center">    
+					  <hr />
+					  <div class="row justify-content-center">
+                      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                      <div class="form-group">
+                            <label><strong>Title</strong></label>
+                            <span style="display:block" id="title">Miscellaneous 2017-18</span>
+                      </div>
+                          </div>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						  <div class="form-group">
+							<label><strong>Mean</strong></label>
+							<span style="display:block" id="misc-17-18-mean"></span>
+						  </div>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+						  <div class="form-group">
+							<label><strong>Median</strong></label>
+							<span style="display:block" id="misc-17-18-median"></span>
+						  </div>
+						</div>
+					  </div>
+					  <hr />
+					</div>
+				  </div>
+				<div class="row"><br><br><br><br>
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" id="miscellaneousRose17-18" style="width: 700px; height: 200; font-family: Comic Sans MS; font-size: 25px;"></div>
+					<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8" id="miscellaneous17-18" style="width: 600px; height: 450px; font-family: Comic Sans MS; font-size: 25px;"></div>
+				</div><br><br>
+			</div>
+
+		  
+			<div class="collapse" class="container" class="tab-pane active" id="totals18" role="tabpanel" style="width: 1250px; height: 400px; font-family: Comic Sans MS; font-size: 25px;"><br><br><br><br></div>
+			<!--source of format: https://www.bootply.com/qjvYXfWLuN-->
+			<div class="collapse" class="container" class="tab-pane active" id="breakdown1718" role="tabpanel" style="width: 1250px; height: 400px; font-family: Comic Sans MS; font-size: 25px;">
+				<br><br><br>
+				<div class="container">
+				  <div class="row vdivide" style="font-family: 'Impact';">
+					<div class="col-sm-6 text-center"><h1>Median Monthly Spending: <br><br>$</h1></div>
+					<div class="col-sm-6 text-center"><h1>Average Monthly Spending: <br><br>$</h1></div>
+				  </div>
+				</div>
+				<hr>
+				<div class="row vdivide" style="font-family: 'Impact';">
+					<div class="col-sm-4 text-center"><h1>Luxenberg:<br><br> $ </h1></div>
+					<div class="col-sm-4 text-center"><h1>Mandelbaum: <br><br> $ </h1></div>
+					<div class="col-sm-4 text-center"><h1>Melyssa & David:<br><br> $ </h1></div>
+				</div>
+				<hr>
+				<div class="container">
+				  <div class="row vdivide" style="font-family: 'Impact';">
+					<div class="col-sm-6 text-center"><h1>Total projected to spend: <br><br>$</h1></div>
+					<div class="col-sm-6 text-center"><h1>Total spent: <br><br>$</h1></div>
+				  </div>
+				</div>               
+            </div>
+         </center>
+        </div>
+        
+
+	
 		<script>
 			
-			Plotly.newPlot('rentRose16-17', [rentRose], getLayout(layoutRose, "Rent 16-17"));
-			Plotly.newPlot('rent16-17', [getGraphType(rent, 'line')], getLayout(layout, "Rent 16-17"));
-			Plotly.newPlot('rentInsRose16-17', [rentInsuranceRose], getLayout(layoutRose, "Renter's Insurance 16-17"));
-			Plotly.newPlot('rentIns16-17', [getGraphType(rentInsurance,'line')], getLayout(layout, "Renter's Insurance 16-17"));
-			Plotly.newPlot('conedRose16-17', [conedRose], getLayout(layoutRose, "ConEd 16-17"));
-			Plotly.newPlot('coned16-17', [getGraphType(coned, 'line')], getLayout(layout, "ConEd 16-17"));
-			Plotly.newPlot('internetRose16-17', [internetRose], getLayout(layoutRose, "Internet 16-17"));
-			Plotly.newPlot('internet16-17', [getGraphType(internet, 'line')], getLayout(layout, "Internet 16-17"));
-			Plotly.newPlot('foodstaplesRose16-17', [foodStaplesRose], getLayout(layoutRose, "Food Staples 16-17"));
-			Plotly.newPlot('foodstaples16-17', [getGraphType(foodStaples, 'line')], getLayout(layout, "Food Staples 16-17"));
-			Plotly.newPlot('foodoutRose16-17', [foodEatingOutRose], getLayout(layoutRose, "Food Eating Out 16-17"));
-			Plotly.newPlot('foodout16-17', [getGraphType(foodEatingOut, 'line')], getLayout(layout, "Food Eating Out 16-17"));
-			Plotly.newPlot('travelRose16-17', [travelRose], getLayout(layoutRose, "Travel 16-17"));
-			Plotly.newPlot('travel16-17', [getGraphType(travel)], getLayout(layout, "Travel 16-17"));
-			Plotly.newPlot('presentsRose16-17', [presentsRose], getLayout(layoutRose, "Presents 16-17"));
-			Plotly.newPlot('presents16-17', [getGraphType(presents)], getLayout(layout, "Presents 16-17"));
-			Plotly.newPlot('miscellaneousRose16-17', [miscellaneousRose], getLayout(layoutRose, "Miscellaneous Spending 16-17"));
-			Plotly.newPlot('miscellaneous16-17', [getGraphType(miscellaneous)], getLayout(layout, "Miscellaneous Spending 16-17"));
-			Plotly.newPlot('emergencyRose16-17', [emergencyRose], getLayout(layoutRose, "Emergency 16-17"));
-			Plotly.newPlot('emergency16-17', [getGraphType(emergency)], getLayout(layout, "Emergency 16-17"));
+			Plotly.newPlot('rentRose16-17', [rentRose], getLayout(layoutRose, ""));
+			Plotly.newPlot('rent16-17', [getGraphType(rent, 'line')], getLayout(layout, ""));
+			Plotly.newPlot('rentInsRose16-17', [rentInsuranceRose], getLayout(layoutRose, ""));
+			Plotly.newPlot('rentIns16-17', [getGraphType(rentInsurance,'line')], getLayout(layout, ""));
+			Plotly.newPlot('conedRose16-17', [conedRose], getLayout(layoutRose, ""));
+			Plotly.newPlot('coned16-17', [getGraphType(coned, 'line')], getLayout(layout, ""));
+			Plotly.newPlot('internetRose16-17', [internetRose], getLayout(layoutRose, ""));
+			Plotly.newPlot('internet16-17', [getGraphType(internet, 'line')], getLayout(layout, ""));
+			Plotly.newPlot('foodstaplesRose16-17', [foodStaplesRose], getLayout(layoutRose, ""));
+			Plotly.newPlot('foodstaples16-17', [getGraphType(foodStaples, 'line')], getLayout(layout, ""));
+			Plotly.newPlot('foodoutRose16-17', [foodEatingOutRose], getLayout(layoutRose, ""));
+			Plotly.newPlot('foodout16-17', [getGraphType(foodEatingOut, 'line')], getLayout(layout, ""));
+			Plotly.newPlot('travelRose16-17', [travelRose], getLayout(layoutRose, ""));
+			Plotly.newPlot('travel16-17', [getGraphType(travel)], getLayout(layout, ""));
+			Plotly.newPlot('presentsRose16-17', [presentsRose], getLayout(layoutRose, ""));
+			Plotly.newPlot('presents16-17', [getGraphType(presents)], getLayout(layout, ""));
+			Plotly.newPlot('miscellaneousRose16-17', [miscellaneousRose], getLayout(layoutRose, ""));
+			Plotly.newPlot('miscellaneous16-17', [getGraphType(miscellaneous)], getLayout(layout, ""));
+			Plotly.newPlot('emergencyRose16-17', [emergencyRose], getLayout(layoutRose, ""));
+			Plotly.newPlot('emergency16-17', [getGraphType(emergency)], getLayout(layout, ""));
 			
 			var dataTotal = [getGraphType(rent, 'bar'), getGraphType(rentInsurance, 'bar'), getGraphType(coned, 'bar'), getGraphType(internet, 'bar'), getGraphType(foodStaples, 'bar'), 
 				getGraphType(foodEatingOut, 'bar'), getGraphType(travel, 'bar'), getGraphType(presents, 'bar'), getGraphType(miscellaneous, 'bar'), getGraphType(emergency, 'bar'), getGraphType(totalPerMonth, 'bar')];
@@ -499,37 +1297,115 @@
 			Plotly.newPlot('april17', [getMonthData(10, 'April', '61ce9d')], {margin: { l:200 }});
 			Plotly.newPlot('may17', [getMonthData(11, 'May', 'ce618a')], {margin: { l:200 }});
 			
-			//june 2017 - new year begins, same payment division
+			//new year begins, same payment division
+			Plotly.newPlot('rentRose17-18', [rentRose2], getLayout(layoutRose, ""));
+			Plotly.newPlot('rent17-18', [getGraphType(rent2, 'line')], getLayout(layout, ""));
+			Plotly.newPlot('rentInsRose17-18', [rentInsuranceRose2], getLayout(layoutRose, ""));
+			Plotly.newPlot('rentIns17-18', [getGraphType(rentInsurance2,'line')], getLayout(layout, ""));
+			Plotly.newPlot('conedRose17-18', [conedRose2], getLayout(layoutRose, ""));
+			Plotly.newPlot('coned17-18', [getGraphType(coned2, 'line')], getLayout(layout, ""));
+			Plotly.newPlot('internetRose17-18', [internetRose2], getLayout(layoutRose, ""));
+			Plotly.newPlot('internet17-18', [getGraphType(internet2, 'line')], getLayout(layout, ""));
+			Plotly.newPlot('foodstaplesRose17-18', [foodStaplesRose2], getLayout(layoutRose, ""));
+			Plotly.newPlot('foodstaples17-18', [getGraphType(foodStaples2, 'line')], getLayout(layout, ""));
+			Plotly.newPlot('foodoutRose17-18', [foodEatingOutRose2], getLayout(layoutRose, ""));
+			Plotly.newPlot('foodout17-18', [getGraphType(foodEatingOut2, 'line')], getLayout(layout, ""));
+			Plotly.newPlot('travelRose17-18', [travelRose2], getLayout(layoutRose, ""));
+			Plotly.newPlot('travel17-18', [getGraphType(travel2, 'line')], getLayout(layout, ""));
+			Plotly.newPlot('miscellaneousRose17-18', [miscellaneousRose], getLayout(layoutRose, ""));
+			Plotly.newPlot('miscellaneous17-18', [getGraphType(miscellaneous2, 'line')], getLayout(layout, ""));
+			
+			dataTotal = [getGraphType(rent, 'bar'), getGraphType(rentInsurance, 'bar'), getGraphType(coned, 'bar'), getGraphType(internet, 'bar'), getGraphType(foodStaples, 'bar'), 
+				getGraphType(foodEatingOut, 'bar'), getGraphType(travel, 'bar'), getGraphType(miscellaneous, 'bar'),  getGraphType(totalPerMonth, 'bar')];
+			
+			Plotly.newPlot('totals18', dataTotal, getLayout(layout, "Spending over time: June 2017 - May 2018 Totals"));
+			
 			Plotly.newPlot('june17', [getMonthDataYear2(0, 'June', 'A9BBF7')], {margin: { l:200 }});
+			Plotly.newPlot('july17', [getMonthDataYear2(1, 'July', 'A9E0F7')], {margin: { l:200 }});
+			Plotly.newPlot('august17', [getMonthDataYear2(2, 'August', 'A9F7BE')], {margin: { l:200 }});
+			Plotly.newPlot('september17', [getMonthDataYear2(3, 'September', 'F7A6D7')], {margin: { l:200 }});
+			Plotly.newPlot('october17', [getMonthDataYear2(4, 'October', 'DBF978')], {margin: { l:200 }});
+			Plotly.newPlot('november17', [getMonthDataYear2(5, 'November', '2474B2')], {margin: { l:200 }});
+			Plotly.newPlot('december17', [getMonthDataYear2(6, 'December', 'ECA12F')], {margin: { l:200 }});
+			Plotly.newPlot('january18', [getMonthDataYear2(7, 'January', 'CE3A89')], {margin: { l:200 }});
+			Plotly.newPlot('february18', [getMonthDataYear2(8, 'February', 'C0C0C0')], {margin: { l:200 }});
+			Plotly.newPlot('march18', [getMonthDataYear2(9, 'March', '000000')], {margin: { l:200 }});
+			Plotly.newPlot('april18', [getMonthDataYear2(10, 'April', '61ce9d')], {margin: { l:200 }});
+			Plotly.newPlot('may18', [getMonthDataYear2(11, 'May', 'ce618a')], {margin: { l:200 }});
+            
+        $("#coned-16-17-mean").html(getMean(coned));
+        $("#coned-16-17-median").html(getMedian(coned));
+        $("#food-staples-16-17-mean").html(getMean(foodStaples));
+        $("#food-staples-16-17-median").html(getMedian(foodStaples));
+        $("#food-out-16-17-mean").html(getMean(foodEatingOut));
+        $("#food-out-16-17-median").html(getMedian(foodEatingOut));
+        $("#travel-16-17-mean").html(getMean(travel));
+        $("#travel-16-17-median").html(getMedian(travel));
+        $("#misc-16-17-mean").html(getMean(miscellaneous));
+        $("#misc-16-17-median").html(getMedian(miscellaneous));
+        $("#coned-17-18-mean").html(getMean(coned2));
+        $("#coned-17-18-median").html(getMedian(coned2));
+        $("#food-staples-17-18-mean").html(getMean(foodStaples2));
+        $("#food-staples-17-18-median").html(getMedian(foodStaples2));
+        $("#food-out-17-18-mean").html(getMean(foodEatingOut2));
+        $("#food-out-17-18-median").html(getMedian(foodEatingOut2));
+        $("#travel-17-18-mean").html(getMean(travel2));
+        $("#travel-17-18-median").html(getMedian(travel2));
+        $("#misc-17-18-mean").html(getMean(miscellaneous2));
+        $("#misc-17-18-median").html(getMedian(miscellaneous2));
+        
+			
 		//source: https://stackoverflow.com/questions/15648329/how-to-make-a-bootstrap-nav-link-inactive	
 		$(document).ready(function() {
 		   $(".nav li.disabled a").click(function() {
 			 return false;
 		   });
 		});
-		
+            
 		$(document).ready(function() {
-  			$('#front-page').collapse();// Handler for .ready() called.
+  			$('#front-page').show();// Handler for .ready() called.
 		});
+            
+        $('#home-button').on('click', function(){
+            $('#front-page').show();
+            $('.collapse').collapse('hide');
+        })
 		//https://stackoverflow.com/questions/29511971/bootstrap-collapse-visible-only-one-at-a-time
-		$('.clicker').on('click',function(){$('.collapse').collapse('hide');})
-		</script>
-		<!--source: https://www.bootply.com/D9QwpTDXYd
-		<div id="footer">
-		    <br><br><br><div class="row vdivide" style="font-family: 'Impact'; color:grey">
-				<center><div class="col-sm-4 text-center"  class="footerInfo" class="copyright">
-					<p>Copyright &copy; 2017 David Mandelbaum</p>
-				</div>
-				<a class="col-sm-4 text-center" class="footerInfo" href="https://docs.google.com/spreadsheets/d/1Fsn76NqEHosQN8ySucKsCFsXMjosL3Swr5MytqHG4p4/edit#gid=0">Check out the data in this spreadsheet</a>
-		  		<div class="col-sm-4 text-center" class="footerInfo">Technologies used: HTML, CSS, Bootstrap, Javascript, jQuery, Plotly.js</div></center>
-		  	</div>
-		</div>-->
-		
-		
+        $('.clicker').on('click',function()
+             {
+                $('#front-page').hide();
+                $('.collapse').collapse('hide');
+             }
+        )
 
+		</script>
+		<!--source: https://www.bootply.com/D9QwpTDXYd-->
+         <div class="stats-wrapper" class="row justify-content-center" id="footer">
+            <div class="container-fluid text-center">    
+                <br>
+              <div class="row justify-content-center">
+                  <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                      <div class="form-group">
+                            <span style="display:block" id="title">Copyright &copy; 2017 David Mandelbaum</span>
+                      </div>
+                  </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                      <div class="form-group">
+                        <span style="display:block" id="dataLink"><a href="https://docs.google.com/spreadsheets/d/1Fsn76NqEHosQN8ySucKsCFsXMjosL3Swr5MytqHG4p4/edit#gid=0">Check out the data in this spreadsheet</a></span>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                      <div class="form-group">
+                        <span style="display:block" id="version">Version: 2.0</span>
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+    
+		
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
  </body>
-</head>
 </html>
